@@ -49,3 +49,31 @@ The operating system's thread scheduler uses different scheduling algorithms to 
 the operating system. Common scheduling algorithms include round-robin, priority scheduling, and others.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3. what will be the output of this code?
+public class San{
+    public static void main(String[] args){
+        try{
+            System.out.println("Hello World");
+        }finally{
+            System.out.println("finally executing");
+        }
+    }
+    
+}
+
+Ans : Hello World
+finally executing
+The output of the given code will be:
+
+```
+Hello World
+finally executing
+```
+
+In Java, the `finally` block is used to ensure that a certain piece of code is always executed, whether an exception is thrown or not. In this case, the `try` block contains
+the statement `System.out.println("Hello World")`, which will be executed. After that, the `finally` block is executed, printing "finally executing."
+
+Even if there were an exception thrown inside the `try` block, the `finally` block would still be executed before the exception is propagated up the call stack. 
+In this specific example, since there's no exception, both the `try` block and the `finally` block are executed in sequence.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

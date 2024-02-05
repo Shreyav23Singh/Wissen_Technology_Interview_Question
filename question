@@ -1,1 +1,31 @@
+Q1 . What is the output of these code?
 
+class Newthread extends Thread{
+    Thread t; 
+    String name;
+    Newthread(String threadname){
+        name=threadname;
+        t=new Thread(this,name);
+        t.start();
+    }
+    public void run(){
+        
+    }
+    
+}
+class multithreaded_programming{
+    public static void main(String args[]){
+        Newthread obj1 =new Newthread("one");
+        Newthread obj2 =new Newthread("two");
+        try
+        {
+            obj1.t.wait();
+            System.out.print(obj1.t.isAlive());
+        }
+        catch(Exception e){
+            System.out.print("Main thread interrupted");
+        }
+    }
+}
+
+Output :- catch will execute and print statement will give i.e, Main thread interupted

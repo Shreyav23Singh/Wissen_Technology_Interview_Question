@@ -29,3 +29,23 @@ class multithreaded_programming{
 }
 
 Output :- catch will execute and print statement will give i.e, Main thread interupted
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2. what will happen if two java threads of the same priority are called to be processed simultaneously . Assumption only one CPU are available. 
+1. Anyone will be executed first lexographically 
+2. Both of them will be executed simultaneously 
+3. None of them will be executed 
+4. Decision will be taken up by os 
+
+Ans : 4 
+When two Java threads of the same priority are competing for the same CPU and only one CPU is available, the Java Virtual Machine (JVM) or the underlying operating system 
+will decide which thread to execute. This decision is typically made by the operating system's thread scheduler.
+
+The correct option is:
+
+4. Decision will be taken up by the OS
+
+The operating system's thread scheduler uses different scheduling algorithms to determine which thread gets to execute. The specific algorithm used may vary depending on 
+the operating system. Common scheduling algorithms include round-robin, priority scheduling, and others.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

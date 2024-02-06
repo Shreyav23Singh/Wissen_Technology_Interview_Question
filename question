@@ -341,3 +341,55 @@ Ans : There is no explicit inheritance relationship between classes A and B. The
 Therefore, the correct answer is:
 
 None
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Q9. What will be the output?
+interface Tester{
+    int i=5;
+}
+class Test implements Tester
+{
+    void f(){
+        i=10;
+        System.out.println("i=" +i);
+    }
+}
+ class Main{
+    public static void main(String[]  args){
+        Test t=new Test();
+        t.f();
+    }
+}
+
+Ans : The code will result in a compilation error. Here's the explanation:
+
+In the `Tester` interface, the variable `i` is implicitly `public`, `static`, and `final`. Therefore, it is a constant and cannot be modified in any implementing class.
+
+However, in the `Test` class, you are attempting to modify the value of `i` in the `f()` method:
+
+```java
+void f(){
+    i=10;  // This will cause a compilation error
+    System.out.println("i=" + i);
+}
+```
+
+This modification is not allowed for interface variables. Therefore, the code will not compile, and you will get a compilation error at the line `i=10;`.
+
+To fix this issue, you should declare `i` as an instance variable in the `Test` class if you want to modify its value:
+
+```java
+class Test implements Tester {
+    int i = 5;  // Declare as an instance variable
+
+    void f() {
+        i = 10;  // Now this is allowed
+        System.out.println("i=" + i);
+    }
+}
+```
+
+This way, `i` in the `Test` class is a separate variable from the `i` in the `Tester` interface, and you can modify its value.

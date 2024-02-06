@@ -294,3 +294,27 @@ class Myclass implements Serializable{
 
 Ans : S=Hello , i=-7, d=2.1E10
 
+Explanation:
+
+Serialization (main method, first try block):
+
+An instance of the Myclass is created with the values "Hello", -7, and 2.1e10.
+A FileOutputStream (fos) is created to write to a file named "serial".
+An ObjectOutputStream (oos) is created using fos.
+The writeObject method is used to serialize and write the object1 to the file.
+The stream is flushed and closed.
+Deserialization (main method, second try block):
+
+A new instance of Myclass named object2 is declared.
+A FileInputStream (fis) is created to read from the file "serial".
+An ObjectInputStream (ois) is created using fis.
+The readObject method is used to deserialize and read the object from the file into object2.
+The stream is closed.
+The deserialized object (object2) is then printed using the toString method.
+Myclass:
+
+Myclass is a simple class that implements the Serializable interface, allowing its objects to be serialized.
+It has three fields (s, i, and d) and a constructor to initialize them.
+The toString method is overridden to provide a string representation of the object.
+In summary, the code serializes an instance of Myclass and then deserializes it, printing the deserialized object. 
+The output will be the string representation of the deserialized object, which is obtained using the toString method

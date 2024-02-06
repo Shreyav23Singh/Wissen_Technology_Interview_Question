@@ -77,3 +77,24 @@ Even if there were an exception thrown inside the `try` block, the `finally` blo
 In this specific example, since there's no exception, both the `try` block and the `finally` block are executed in sequence.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q4. User
+
+how much space will be required to store variable ? consider the each data sent place.
+
+class HelloWorld {
+    public static void main(String[] args) {
+        String[] temp ={"Hi" , "participants"};
+        int length=temp.length;
+        for(int i=0;i<temp.length;i++){
+            System.out.println(temp[i]);
+        }
+    }
+}
+1.  7
+2.  3
+3. 5
+4. 4
+Ans : 4
+--------------------------------------------------------------------------------------------------------------------------------------------------

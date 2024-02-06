@@ -98,3 +98,29 @@ class HelloWorld {
 4. 4
 Ans : 4
 --------------------------------------------------------------------------------------------------------------------------------------------------
+Q5. which java collection provides constant time on an average for basic operation like add , remove and contains . (Assuming there is a no hash collision ) 
+1. TreeSet 
+2. LinkedList 
+3. HashSet(Ans)
+4. TreeMap
+Ans :
+The Java collection that provides constant time on average for basic operations like add, remove, and contains (assuming no hash collision) is HashSet. HashSet is implemented using a hash table,
+and if there are no hash collisions, the average time complexity for these operations is O(1).
+
+In Java collections, the time complexity of basic operations like add, remove, and contains can vary based on the specific collection implementation.
+Let's discuss the mentioned options:
+
+TreeSet: This is typically implemented as a Red-Black Tree. The add, remove, and contains operations have a time complexity of O(log n) on average,
+where n is the number of elements. It is not constant time but logarithmic.
+
+LinkedList: The time complexity for add and remove operations in a LinkedList is O(1) when adding or removing elements at the beginning or end of the list.
+However, for contains (searching), the time complexity is O(n) in the worst case, where n is the number of elements.
+
+HashSet: Implemented using a hash table, the average time complexity for add, remove, and contains operations is O(1) under the assumption of a good hash 
+function and minimal collisions. However, in rare cases with hash collisions, the time complexity can degrade to O(n), where n is the number of elements.
+
+TreeMap: Similar to TreeSet, TreeMap is implemented as a Red-Black Tree. The average time complexity for add, remove, and contains operations is O(log n),
+where n is the number of elements.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------

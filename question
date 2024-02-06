@@ -318,3 +318,26 @@ It has three fields (s, i, and d) and a constructor to initialize them.
 The toString method is overridden to provide a string representation of the object.
 In summary, the code serializes an instance of Myclass and then deserializes it, printing the deserialized object. 
 The output will be the string representation of the deserialized object, which is obtained using the toString method
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Q8. User
+Find Superclass and Subclass in the below java code snippet?
+class B{
+void show(){}
+}
+class A
+{
+void hide() {}
+}
+1. B is superclass and A is subclass
+2. A is superclass and B is a subclass
+3. Object as superclass and A B subclass present
+4. None 
+choose one with reason
+
+Ans : There is no explicit inheritance relationship between classes A and B. They are independent classes with no "extends" keyword indicating a superclass-subclass relationship.
+
+Therefore, the correct answer is:
+
+None

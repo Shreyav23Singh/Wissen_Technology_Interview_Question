@@ -184,5 +184,55 @@ class exception_handling{
 }
 
 Ans  error: reached end of file while parsing , error: 'try' without 'catch', 'finally' or resource declarations
+
+******************* Correct Code *******************
+
+The provided code has a syntax error, specifically in the nested try-catch block. There is a missing closing brace (`}`) for the inner try block. Here's the corrected version of the code:
+
+```java
+class exception_handling {
+    public static void main(String args[]) {
+        try {
+            int a = args.length;
+            int b = 10 / a;
+            System.out.print(a);
+            try {
+                if (a == 1)
+                    a = a / a - a; // a=0
+                if (a == 2) {
+                    int[] c = {1};
+                    c[8] = 9;
+                }
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Type A");
+            } catch (ArithmeticException e) {
+                System.out.println("Type B");
+            }
+        } catch (Exception e) {
+            System.out.println("Outer Exception");
+        }
+    }
+}
+```
+
+Now, let's analyze the code:
+
+1. `int a = args.length;`: `a` is assigned the length of the command-line arguments.
+
+2. `int b = 10 / a;`: If the length of the command-line arguments is 0, this line will result in an `ArithmeticException` due to division by zero.
+
+3. `System.out.print(a);`: Prints the value of `a`.
+
+4. Nested try-catch block:
+   - If `a` is 1, it performs a calculation that sets `a` to 0.
+   - If `a` is 2, it attempts to access an index (8) that is out of bounds for the array `c`, leading to an `ArrayIndexOutOfBoundsException`.
+
+   Depending on the length of the command-line arguments, the code may encounter different exceptions.
+
+Here are possible outputs:
+- If the length of the command-line arguments is 0, it will result in an `ArithmeticException` and print "Type B".
+- If the length of the command-line arguments is 1, it will set `a` to 0 and print "0".
+- If the length of the command-line arguments is 2, it will attempt to access an out-of-bounds index and print "Type A".
+- If there is any other issue, it will catch the general `Exception` in the outer catch block and print "Outer Exception".
         
 

@@ -124,3 +124,34 @@ where n is the number of elements.
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
+Q5. What will be the output of the following program ?
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+       ArrayList obj =new ArrayList();
+       obj.add("A");
+       obj.ensureCapacity(3);
+       System.out.println(obj.size());
+    }
+}
+
+1. 1 
+2. 3
+3. Compile Error
+4.Runtime Error
+Ans : 1
+import java.util.*;: This line imports the entire java.util package, which includes the ArrayList class.
+
+ArrayList obj = new ArrayList();: Here, an instance of the ArrayList class named obj is created. This ArrayList is initially empty.
+
+obj.add("A");: The string "A" is added to the ArrayList obj.
+
+obj.ensureCapacity(3);: This line ensures that the capacity of the ArrayList is at least 3. The ensureCapacity method is used
+to increase the capacity of the ArrayList, if necessary, to ensure that it can hold at least the specified number of elements without needing to resize 
+the internal data array. In this case, it is ensuring that the capacity is at least 3.
+
+System.out.println(obj.size());: This prints the current size of the ArrayList obj. The size method returns the number of elements currently stored in the ArrayList.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+

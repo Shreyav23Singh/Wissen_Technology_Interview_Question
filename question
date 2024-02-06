@@ -199,9 +199,9 @@ class exception_handling {
             try {
                 if (a == 1)
                     a = a / a - a; // a=0
-                if (a == 2) {
-                    int[] c = {1};
-                    c[8] = 9;
+                if (a == 2) { //line 1
+                    int[] c = {1}; // line 2
+                    c[8] = 9; // line 3
                 }
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Type A");
@@ -234,5 +234,13 @@ Here are possible outputs:
 - If the length of the command-line arguments is 1, it will set `a` to 0 and print "0".
 - If the length of the command-line arguments is 2, it will attempt to access an out-of-bounds index and print "Type A".
 - If there is any other issue, it will catch the general `Exception` in the outer catch block and print "Outer Exception".
+
+
+## if (a == 2): This is a condition that checks if the value of variable a is equal to 2.
+
+int[] c = {1};: This line declares and initializes an array c with a single element having the value 1.
+
+c[8] = 9;: This line attempts to assign the value 9 to the element at index 8 of the array c. However, the array c was declared with only one element at index 0. 
+So, this line will result in an ArrayIndexOutOfBoundsException because the index 8 is out of bounds for an array of size 1.  ##
         
 

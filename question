@@ -242,5 +242,11 @@ int[] c = {1};: This line declares and initializes an array c with a single elem
 
 c[8] = 9;: This line attempts to assign the value 9 to the element at index 8 of the array c. However, the array c was declared with only one element at index 0. 
 So, this line will result in an ArrayIndexOutOfBoundsException because the index 8 is out of bounds for an array of size 1.  ##
-        
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q7. 
 
